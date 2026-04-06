@@ -1,13 +1,10 @@
-function add7(num) {
-    return num+7;
+const input = parseInt(prompt("Please Enter a Number to FizzBuzz up to:"));
+function fizzBuzz(a) {
+    let fizz = a % 3 === 0;
+    let buzz = a % 5 ===0;
+    return "fizz".repeat(+fizz) + "buzz".repeat(+buzz) + a.toString().repeat(((fizz+buzz)<1));
 }
-function multiply(a,b) {
-    return a*b;
-}
-function capitalize(input) {
-    input = input.toLowerCase();
-    return input.replace(input.at(0), input.at(0).toUpperCase());
-}
-function lastLetter(input) {
-    return input.at(-1);
+
+for (let i = 1;i<=input; i++) {
+    console.log(fizzBuzz(i))
 }
